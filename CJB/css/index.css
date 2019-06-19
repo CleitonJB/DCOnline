@@ -26,16 +26,31 @@ header a{
 }
 
 header input{
-	margin-top: 10px;
+	margin: 10px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	width: 100px;
+	height: 30px;
 }
 
 .Bloco{
+	border-radius: 5%;
 	padding: 30px;
 	margin: auto;
 	width: 40%;
 	height: 520px;
 	background: white;
 	box-shadow: 3px 5px 10px black;
+}
+
+.Bloco input{
+	height: 25px;
+}
+
+.Bloco input, .Bloco textarea{
+	border: 1px solid black;
+	border-radius: 5px;
+	width: 50%;
 }
 
 .Bloco h1, .Bloco p{

@@ -2,10 +2,24 @@
 <html>
 <meta charset="utf-8">
 	<head>
-		<title>Home</title>
+		<title> Entrar </title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body>
+
+		<?php  
+
+			session_start();
+
+			require("coxecao.php");
+
+			// as variáveis login e senha recebem os dados digitados na página anterior
+			$usuario = $_POST['usuario'];
+			$senha = $_POST['senha'];
+
+			$result = mysql_query("SELECT * FROM `usuario` WHERE `nome` = '$usuario' AND `senha`= '$senha'");
+		?>
+
 		<header>
 			<center>
 				<h1>Dicionário Online</h1>
@@ -27,20 +41,21 @@
 		</header>
 
 		<div class="Bloco">
-			<center>
-				<h1>Cadastre uma nova palavra!</h1>
+			<form action="cadastro.php" method="post">
+				<center>
+					<h1> Entre na sua conta </h1>
 
-				<form action="cadastro.php" method="post">
-					<p>Palavra:</p> 
-					<input type="text" name="palavra" autocomplete="off">
+					<p>Usuário:</p> 
+					<input type="text" name="usuario" autocomplete="off">
 
-					<p>Descrição:</p> 
-					<textarea rows="5" cols="40" name="descricao" autocomplete="off"> </textarea>
+					<p>Senha:</p> 
+					<input type="password" name="senha" autocomplete="off">
 
 					<br> <br> <br> <br>
 					<input type="submit" name="" value="Enviar">
-				</form>
-			</center>
+
+				</center>
+			</form>
 		</div>
 	</body>
 </html>
