@@ -16,10 +16,6 @@
 					<input type="button" value="Início"> 
 				</a>
 
-				<a href="Logar.php"> 
-					<input type="button" value="Entrar">
-				</a>
-
 				<a href="palavras.php"> 
 					<input type="button" value="Palavras">
 				</a>
@@ -48,6 +44,7 @@
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 					  // output data of each row
+						echo "<br>";
 					  while($row = $result->fetch_assoc()) {
 					  	  echo "<div align=\"center\">";
 					  	  	echo "<div class=\"Organizador\">";
@@ -62,7 +59,10 @@
 					      echo "</div>";
 					  }
 			} else {
+				echo "<br> <br> <br> <br>";
+					echo "<div align=\"center\">";
 					  echo "Nenhuma palavra cadastrada no banco de dados!";
+					echo "</div>";
 			}
 			$conn->close();
 		?>
@@ -81,6 +81,7 @@
 
 			.Palavra, .Descricao{
 				height: 25px;
+				color: black;
 				border-top: 1px solid black;
 				border-bottom: 1px solid black;
 				font-size: 18px;
@@ -91,7 +92,6 @@
 				width: 20%;
 				background: white;
 				font-family: arial, sans-serif;
-				color: black;
 			}
 
 			.Descricao{
@@ -99,7 +99,6 @@
 				margin-left: 10px;
 				background: #BDBDBD;
 				font-family: arial, sans-serif;
-				color: black;
 			}
 		</style>
 	</body>

@@ -33,6 +33,10 @@ header input{
 	height: 30px;
 }
 
+input{
+	padding: 2px;
+}
+
 .Bloco{
 	border-radius: 5%;
 	padding: 30px;

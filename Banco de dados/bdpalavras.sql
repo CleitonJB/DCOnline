@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 19/06/2019 às 18:12
+-- Tempo de geração: 24/06/2019 às 20:26
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
 -- Versão do PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -36,38 +36,39 @@ CREATE TABLE `palavras` (
 --
 
 INSERT INTO `palavras` (`palavra`, `descricao`) VALUES
-('da', ' asd'),
-('asd', ' dasdadad'),
-('Cleiton', 'Nome qualquer '),
-('Maria Clara', 'Monitora frustada ');
+('a', 'letra'),
+('c', 'letra'),
+('b', 'letra\r\n '),
+('dasda', ' adasdadadasdads');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `usuario`
+-- Estrutura para tabela `users`
 --
 
-CREATE TABLE `usuario` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `nome` text NOT NULL,
-  `senha` text NOT NULL
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `usuario`
+-- Fazendo dump de dados para tabela `users`
 --
 
-INSERT INTO `usuario` (`id`, `nome`, `senha`) VALUES
-(1, 'Satu', 'profsatu');
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'Satu', 'profsatu'),
+(2, 'testuser', 'testuserpass');
 
 --
 -- Índices de tabelas apagadas
 --
 
 --
--- Índices de tabela `usuario`
+-- Índices de tabela `users`
 --
-ALTER TABLE `usuario`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -75,10 +76,10 @@ ALTER TABLE `usuario`
 --
 
 --
--- AUTO_INCREMENT de tabela `usuario`
+-- AUTO_INCREMENT de tabela `users`
 --
-ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -2,11 +2,10 @@
 <html>
 <meta charset="utf-8">
 	<head>
-		<title> Entrar </title>
+		<title>Home</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body>
-
 		<header>
 			<center>
 				<h1>Dicionário Online</h1>
@@ -24,21 +23,20 @@
 		</header>
 
 		<div class="Bloco">
-			<form action="Login.php" method="post">
-				<center>
-					<h1> Entre na sua conta </h1>
+			<center>
+				<h1>Cadastre uma nova palavra!</h1>
 
-					<p>Usuário:</p> 
-					<input type="text" name="user" autocomplete="off">
+				<form action="cadastro.php" method="post">
+					<p>Palavra:</p> 
+					<input type="text" name="palavra" autocomplete="off">
 
-					<p>Senha:</p> 
-					<input type="password" name="pass" autocomplete="off">
+					<p>Descrição:</p> 
+					<textarea rows="5" cols="40" name="descricao" autocomplete="off"> </textarea>
 
 					<br> <br> <br> <br>
-					<input type="submit" value="Enviar">
-
-				</center>
-			</form>
+					<input type="submit" name="" value="Enviar">
+				</form>
+			</center>
 		</div>
 	</body>
 </html>
