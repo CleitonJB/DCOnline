@@ -1,6 +1,4 @@
 <?php  
-	
-	session_start();
 
 	$conectar = mysqli_connect('localhost','root', 'root');
 	$banco = mysqli_select_db($conectar, "bdpalavras");

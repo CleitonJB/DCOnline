@@ -1,3 +1,9 @@
+<?php
+	session_start();
+	 
+	require 'init.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
@@ -25,6 +31,12 @@
 				</a>
 
 			</center>
+
+			<?php if (isLoggedIn()): ?>
+	            <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="panel.php">Painel</a> | <a href="logout.php">Sair</a></p>
+	        <?php else: ?>
+	            <p>Olá, visitante. <a href="form-login.php">Login</a></p>
+	        <?php endif; ?>
 		</header>
 
 		<div class="Bloco">
