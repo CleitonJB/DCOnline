@@ -19,6 +19,10 @@
 				<a href="palavras.php"> 
 					<input type="button" value="Palavras">
 				</a>
+
+				<a href="Logout.php"> 
+					<input type="button" value="Sair"> 
+				</a>
 			</center>
 		</header>
 		<center>

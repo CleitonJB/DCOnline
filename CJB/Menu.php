@@ -19,6 +19,11 @@
 				<a href="palavras.php"> 
 					<input type="button" value="Palavras">
 				</a>
+
+				<a href="Logout.php"> 
+					<input type="button" value="Sair"> 
+				</a>
+
 			</center>
 		</header>
 
@@ -28,10 +33,10 @@
 
 				<form action="cadastro.php" method="post">
 					<p>Palavra:</p> 
-					<input type="text" name="palavra" autocomplete="off">
+					<input type="text" name="palavra" autocomplete="off" placeholder="Palavra">
 
 					<p>Descrição:</p> 
-					<textarea rows="5" cols="40" name="descricao" autocomplete="off"> </textarea>
+					<textarea rows="5" cols="40" name="descricao" autocomplete="off" placeholder="Descrição"></textarea>
 
 					<br> <br> <br> <br>
 					<input type="submit" name="" value="Enviar">

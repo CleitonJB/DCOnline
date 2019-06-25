@@ -18,7 +18,11 @@
 				</a>
 
 				<a href="palavras.php"> 
-					<input type="button" value="Palavras">
+					<input type="button" value="Palavras"> 
+				</a>
+
+				<a href="Logout.php"> 
+					<input type="button" value="Sair"> 
 				</a>
 			</center>
 		</header>
@@ -29,10 +33,10 @@
 					<h1> Entre na sua conta </h1>
 
 					<p>Usuário:</p> 
-					<input type="text" name="user" autocomplete="off">
+					<input type="text" name="username" autocomplete="off" placeholder="Usuario">
 
 					<p>Senha:</p> 
-					<input type="password" name="pass" autocomplete="off">
+					<input type="password" name="password" autocomplete="off" placeholder="Senha">
 
 					<br> <br> <br> <br>
 					<input type="submit" value="Enviar">
