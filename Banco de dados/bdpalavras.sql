@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Tempo de geração: 24/06/2019 às 20:26
+-- Tempo de geração: 01/07/2019 às 19:11
 -- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
 -- Versão do PHP: 7.0.18-0ubuntu0.16.04.1
 
@@ -39,47 +39,48 @@ INSERT INTO `palavras` (`palavra`, `descricao`) VALUES
 ('a', 'letra'),
 ('c', 'letra'),
 ('b', 'letra\r\n '),
-('dasda', ' adasdadadasdads');
+('dasda', ' adasdadadasdads'),
+('asdad', 'asdasdas'),
+('Cleiton', 'adagdasuidasd');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `users`
+-- Estrutura para tabela `usuarios`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `usuarios` (
+  `ID` int(10) UNSIGNED ZEROFILL NOT NULL,
+  `login` varchar(30) DEFAULT NULL,
+  `senha` varchar(40) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Fazendo dump de dados para tabela `users`
+-- Fazendo dump de dados para tabela `usuarios`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'Satu', 'profsatu'),
-(2, 'testuser', 'testuserpass');
+INSERT INTO `usuarios` (`ID`, `login`, `senha`) VALUES
+(0000000004, 'admin', 'admin');
 
 --
 -- Índices de tabelas apagadas
 --
 
 --
--- Índices de tabela `users`
+-- Índices de tabela `usuarios`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`ID`);
 
 --
 -- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
--- AUTO_INCREMENT de tabela `users`
+-- AUTO_INCREMENT de tabela `usuarios`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `usuarios`
+  MODIFY `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -12,16 +12,12 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="index.php"> 
+				<a href="Menu.php"> 
 					<input type="button" value="Início"> 
 				</a>
 
 				<a href="palavras.php"> 
 					<input type="button" value="Palavras">
-				</a>
-
-				<a href="Logout.php"> 
-					<input type="button" value="Sair"> 
 				</a>
 			</center>
 		</header>

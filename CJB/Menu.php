@@ -1,9 +1,3 @@
-<?php
-	session_start();
-	 
-	require 'init.php';
-?>
-
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
@@ -18,32 +12,21 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="index.php"> 
+				<a href="Menu.php"> 
 					<input type="button" value="Início"> 
 				</a>
 
 				<a href="palavras.php"> 
 					<input type="button" value="Palavras">
 				</a>
-
-				<a href="Logout.php"> 
-					<input type="button" value="Sair"> 
-				</a>
-
 			</center>
-
-			<?php if (isLoggedIn()): ?>
-	            <p>Olá, <?php echo $_SESSION['user_name']; ?>. <a href="panel.php">Painel</a> | <a href="logout.php">Sair</a></p>
-	        <?php else: ?>
-	            <p>Olá, visitante. <a href="form-login.php">Login</a></p>
-	        <?php endif; ?>
 		</header>
 
 		<div class="Bloco">
 			<center>
 				<h1>Cadastre uma nova palavra!</h1>
 
-				<form action="cadastro.php" method="post">
+				<form action="cadastro.php" method="POST">
 					<p>Palavra:</p> 
 					<input type="text" name="palavra" autocomplete="off" placeholder="Palavra">
 
