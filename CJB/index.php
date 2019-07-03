@@ -19,7 +19,7 @@
 					if ($count==1) {
 						header("location:Menu.php");
 					}else{
-
+						echo '<script>alert("Usuário e/ou senha incorreto(s)!")</script>';
 					}
 				}
 			}

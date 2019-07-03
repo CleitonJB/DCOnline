@@ -12,7 +12,7 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="index.php"> 
+				<a href="Menu.php"> 
 					<input type="button" value="Início"> 
 				</a>
 

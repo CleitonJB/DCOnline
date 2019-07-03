@@ -12,7 +12,7 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="index.php"> 
+				<a href="Menu.php"> 
 					<input type="button" value="Início"> 
 				</a>
 
@@ -40,11 +40,23 @@
 			}
 		?>
 		<?php
-			$sql = "SELECT palavra, descricao FROM palavras";
+			$sql = "SELECT palavra, descricao FROM palavras ORDER BY palavra ASC";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 					  // output data of each row
 						echo "<br>";
+						echo "<div align=\"center\">";
+					  	  	echo "<div class=\"Organizador\">";
+					  	  		echo "<div id=\"Palavra\">";
+					  	  			echo "<p> Palavras </p>";
+					  	  		echo "</div>";
+
+					  	  		echo "<div id=\"Descricao\">";
+					  	  			echo "<p> Descrições </p>";
+					  	  		echo "</div>";
+					  	  	echo "</div>";
+					      echo "</div>";
+
 					  while($row = $result->fetch_assoc()) {
 					  	  echo "<div align=\"center\">";
 					  	  	echo "<div class=\"Organizador\">";
@@ -79,13 +91,45 @@
 				flex-direction: horizontal;
 			}
 
+			p{
+				color: black;
+			}
+
+			#Palavra{
+				padding-top: 3px;
+				height: 25px;
+				border-top: 1px solid black;
+				border-bottom: 1px solid black;
+				font-size: 18px;
+				margin: 1px 0px;
+				width: 20%;
+				background: white;
+				font-family: arial, sans-serif;
+			}
+
+			#Descricao{
+				padding-top: 3px;
+				height: 25px;
+				border-top: 1px solid black;
+				border-bottom: 1px solid black;
+				font-size: 18px;
+				margin: 1px 0px;
+				width: 80%;
+				margin-left: 10px;
+				background: #BDBDBD;
+				font-family: arial, sans-serif;
+			}
+
 			.Palavra, .Descricao{
+				padding-top: 3px;
 				height: 25px;
 				color: black;
 				border-top: 1px solid black;
 				border-bottom: 1px solid black;
 				font-size: 18px;
 				margin: 1px 0px;
+				overflow-x: hidden;
+				overflow-y: scroll;
 			}
 
 			.Palavra{
