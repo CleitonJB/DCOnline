@@ -1,39 +1,29 @@
-<!-- https://www.youtube.com/watch?v=aIsu9SPcGbU -->
-
-<?php  
-	$host ="localhost";
-	$user ="root";
-	$password ="root";
-	$db ="bdpalavras";
-
-	$conectando = mysql_connect($host, $user, $password);
-	$conexao = mysql_select_db($conectando, $db);
-
-	if (isset($_POST['login'])) {
-		$uname=$_POST['login'];
-		$password=$_POST['senha'];
-
-		$sql="select * from usuarios where login='".$uname."'AND senha='".$password."'limit 1";
-
-		$result=mysqli_query($sql)
-
-		if (mysqli_num_rows($result)==1) {
-			echo "Você logou com sucesso";
-			exit();
-		}
-		else{
-			echo "Login inválido";
-			exit();
-		}
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <meta charset="utf-8">
 	<head>
-		<title> DCOnline - Login </title>
+		<title> DCOnline - Entrar </title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<?php  
+			$con = mysqli_connect("localhost", "root", "root", "DC");
+			if (isset($_POST['log'])) {
+				$username = mysqli_real_escape_string($con,$_POST['user']);
+				$passwd = mysqli_real_escape_string($con,$_POST['pass']);
+
+				if ($username!="" && $passwd!="") {
+					$sql = "SELECT id FROM users WHERE username='$username' and password='$passwd'";
+					$result = mysqli_query($con, $sql);
+					$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+
+					$count = mysqli_num_rows($result);
+					if ($count==1) {
+						header("location:Menu.php");
+					}else{
+
+					}
+				}
+			}
+		?>
 	</head>
 	<body>
 
@@ -54,18 +44,18 @@
 		</header>
 
 		<div class="Bloco">
-			<form method="POST" action="#">
+			<form action="index.php" method="POST">
 				<center>
 					<h1> Entre na sua conta </h1>
 
 					<p>Usuário:</p> 
-					<input type="text" name="login" autocomplete="off">
+					<input type="text" name="user" autocomplete="off">
 
 					<p>Senha:</p> 
-					<input type="password" name="senha" autocomplete="off">
+					<input type="password" name="pass" autocomplete="off">
 
 					<br> <br> <br> <br>
-					<input type="submit" name="entrar" value="Enviar">
+					<input type="submit" name="log" value="Enviar">
 
 				</center>
 			</form>

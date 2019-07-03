@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 	<head>
-		<title>Palavras Cadastradas</title>
+		<title>DCOnline - Banco de dados</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body>
@@ -12,7 +12,7 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="Menu.php"> 
+				<a href="index.php"> 
 					<input type="button" value="Início"> 
 				</a>
 
@@ -31,7 +31,7 @@
 			$server = "localhost";
 			$usuario = "root";
 			$senha = "root";
-			$banco = "bdpalavras";
+			$banco = "DC";
 			// Create connection
 			$conn = new mysqli($server, $usuario, $senha, $banco);
 			// Check connection

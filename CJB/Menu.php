@@ -2,7 +2,7 @@
 <html>
 <meta charset="utf-8">
 	<head>
-		<title>Home</title>
+		<title>DCOnline - Menu</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 	<body>
@@ -12,7 +12,7 @@
 
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
-				<a href="Menu.php"> 
+				<a href="index.php"> 
 					<input type="button" value="Início"> 
 				</a>
 
