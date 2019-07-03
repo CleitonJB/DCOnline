@@ -45,7 +45,7 @@
 			if ($result->num_rows > 0) {
 					  // output data of each row
 						echo "<br>";
-						echo "<div align=\"center\">";
+						echo "<div id=\"Topo\" align=\"center\">";
 					  	  	echo "<div class=\"Organizador\">";
 					  	  		echo "<div id=\"Palavra\">";
 					  	  			echo "<p> Palavras </p>";
@@ -55,8 +55,7 @@
 					  	  			echo "<p> Descrições </p>";
 					  	  		echo "</div>";
 					  	  	echo "</div>";
-					      echo "</div>";
-
+					    echo "</div>";
 					  while($row = $result->fetch_assoc()) {
 					  	  echo "<div align=\"center\">";
 					  	  	echo "<div class=\"Organizador\">";
@@ -91,32 +90,36 @@
 				flex-direction: horizontal;
 			}
 
+			#Topo{
+				margin-bottom: 5px;
+			}
+
 			p{
-				color: black;
+				color: white;
 			}
 
 			#Palavra{
 				padding-top: 3px;
 				height: 25px;
-				border-top: 1px solid black;
-				border-bottom: 1px solid black;
+				border-top: 1px solid white;
+				border-bottom: 1px solid white;
 				font-size: 18px;
 				margin: 1px 0px;
 				width: 20%;
-				background: white;
+				background: black;
 				font-family: arial, sans-serif;
 			}
 
 			#Descricao{
 				padding-top: 3px;
 				height: 25px;
-				border-top: 1px solid black;
-				border-bottom: 1px solid black;
+				border-top: 1px solid white;
+				border-bottom: 1px solid white;
 				font-size: 18px;
 				margin: 1px 0px;
 				width: 80%;
 				margin-left: 10px;
-				background: #BDBDBD;
+				background: black;
 				font-family: arial, sans-serif;
 			}
 
