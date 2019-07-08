@@ -5,7 +5,7 @@
 		<title> DCOnline - Entrar </title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<?php  
-			$con = mysqli_connect("localhost", "root", "root", "DC");
+			$con = mysqli_connect("localhost", "id10107606_root", "Realmadrid11", "id10107606_dc");
 			if (isset($_POST['log'])) {
 				$username = mysqli_real_escape_string($con,$_POST['user']);
 				$passwd = mysqli_real_escape_string($con,$_POST['pass']);
@@ -17,8 +17,10 @@
 
 					$count = mysqli_num_rows($result);
 					if ($count==1) {
+
 						header("location:Menu.php");
 					}else{
+						
 						echo '<script>alert("Usuário e/ou senha incorreto(s)!")</script>';
 					}
 				}

@@ -29,9 +29,9 @@
 
 		<?php  
 			$server = "localhost";
-			$usuario = "root";
-			$senha = "root";
-			$banco = "DC";
+			$usuario = "id10107606_root";
+			$senha = "Realmadrid11";
+			$banco = "id10107606_dc";
 			// Create connection
 			$conn = new mysqli($server, $usuario, $senha, $banco);
 			// Check connection

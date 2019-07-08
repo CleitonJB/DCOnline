@@ -6,5 +6,5 @@
 
 	$tabela = mysqli_query($conectar, "INSERT INTO palavras (palavra, descricao) VALUES ('$palavra','$descricao')");
 
-	header("Location: index.php");
+	header("Location: Menu.php");
 ?>
