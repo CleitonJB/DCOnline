@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 27-Jul-2019 às 21:50
+-- Tempo de geração: 27-Jul-2019 às 21:48
 -- Versão do servidor: 10.3.16-MariaDB
 -- versão do PHP: 7.3.7
 
@@ -21,6 +21,19 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `dc`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `palavras`
+--
+
+CREATE TABLE `palavras` (
+  `id` int(11) NOT NULL,
+  `palavra` text NOT NULL,
+  `classe` text NOT NULL,
+  `descricao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -46,6 +59,12 @@ INSERT INTO `users` (`id`, `username`, `password`) VALUES
 --
 
 --
+-- Índices para tabela `palavras`
+--
+ALTER TABLE `palavras`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices para tabela `users`
 --
 ALTER TABLE `users`
@@ -54,6 +73,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT de tabelas despejadas
 --
+
+--
+-- AUTO_INCREMENT de tabela `palavras`
+--
+ALTER TABLE `palavras`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `users`

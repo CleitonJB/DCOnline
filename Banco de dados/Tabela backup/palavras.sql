@@ -25,30 +25,24 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura da tabela `palavras`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE `palavras` (
   `id` int(11) NOT NULL,
-  `username` varchar(100) NOT NULL,
-  `password` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Extraindo dados da tabela `users`
---
-
-INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(2, 'admin', 'admin');
+  `palavra` text NOT NULL,
+  `classe` text NOT NULL,
+  `descricao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `users`
+-- Índices para tabela `palavras`
 --
-ALTER TABLE `users`
+ALTER TABLE `palavras`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -56,10 +50,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de tabela `users`
+-- AUTO_INCREMENT de tabela `palavras`
 --
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ALTER TABLE `palavras`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

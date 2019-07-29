@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Tempo de geração: 27-Jul-2019 às 21:50
--- Versão do servidor: 10.3.16-MariaDB
--- versão do PHP: 7.3.7
+-- Host: localhost
+-- Tempo de geração: 03/07/2019 às 16:26
+-- Versão do servidor: 5.7.18-0ubuntu0.16.04.1
+-- Versão do PHP: 7.0.18-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,13 +17,38 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `dc`
+-- Banco de dados: `DC`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `users`
+-- Estrutura para tabela `palavras`
+--
+
+CREATE TABLE `palavras` (
+  `palavra` text NOT NULL,
+  `descricao` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Fazendo dump de dados para tabela `palavras`
+--
+
+INSERT INTO `palavras` (`palavra`, `descricao`) VALUES
+('a', 'letra'),
+('c', 'letra'),
+('b', 'letra\r\n '),
+('dasda', ' adasdadadasdads'),
+('asdad', 'asdasdas'),
+('Cleiton', 'adagdasuidasd'),
+('djkan', 'adnoa'),
+('Cleiton', 'asdandaldnada');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `users`
 --
 
 CREATE TABLE `users` (
@@ -35,24 +58,25 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `users`
+-- Fazendo dump de dados para tabela `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(1, 'testuser', 'testuserpass'),
 (2, 'admin', 'admin');
 
 --
--- Índices para tabelas despejadas
+-- Índices de tabelas apagadas
 --
 
 --
--- Índices para tabela `users`
+-- Índices de tabela `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT de tabelas apagadas
 --
 
 --
@@ -60,8 +84,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

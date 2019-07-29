@@ -5,7 +5,7 @@
 		<title> DCOnline - Entrar </title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 		<?php  
-			$con = mysqli_connect("localhost", "id10107606_root", "Realmadrid11", "id10107606_dc");
+			$con = mysqli_connect("localhost", "root", "", "dc");
 			if (isset($_POST['log'])) {
 				$username = mysqli_real_escape_string($con,$_POST['user']);
 				$passwd = mysqli_real_escape_string($con,$_POST['pass']);
@@ -27,8 +27,7 @@
 			}
 		?>
 	</head>
-	<body>
-
+	<body style="background: url('index.jpg'); background-position: top center; background-size: 100%;">
 		<header>
 			<center>
 				<h1>Dicionário Online</h1>
@@ -48,7 +47,7 @@
 		<div class="Bloco">
 			<form action="index.php" method="POST">
 				<center>
-					<h1> Entre na sua conta </h1>
+					<h1> Entrar </h1>
 
 					<p>Usuário:</p> 
 					<input type="text" name="user" autocomplete="off">

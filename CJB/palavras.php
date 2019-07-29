@@ -5,7 +5,7 @@
 		<title>DCOnline - Banco de dados</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
-	<body>
+	<body style="background: url('palavras.jpg'); background-position: center; background-repeat: no-repeat;">
 		<header>
 			<center>
 				<h1>Dicionário Online</h1>
@@ -13,7 +13,7 @@
 				<p>Site inteiramente focado em armazenar e demonstrar algumas das palavras mais desconhecidas do portugûes-pt.</p>
 
 				<a href="Menu.php"> 
-					<input type="button" value="Início"> 
+					<input type="button" value="Cadastrar"> 
 				</a>
 
 				<a href="palavras.php"> 
@@ -23,15 +23,15 @@
 		</header>
 		<center>
 
-			<h1>Palavras cadastradas:</h1>
+			<h1 style="color: white;">Banco de dados:</h1>
 
 		</center>
 
 		<?php  
 			$server = "localhost";
-			$usuario = "id10107606_root";
-			$senha = "Realmadrid11";
-			$banco = "id10107606_dc";
+			$usuario = "root";
+			$senha = "";
+			$banco = "dc";
 			// Create connection
 			$conn = new mysqli($server, $usuario, $senha, $banco);
 			// Check connection
@@ -40,39 +40,56 @@
 			}
 		?>
 		<?php
-			$sql = "SELECT palavra, descricao FROM palavras ORDER BY palavra ASC";
+			$sql = "SELECT palavra, classe, descricao FROM palavras ORDER BY palavra ASC";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
-					  // output data of each row
+					  	// TOPO DA TABELA
 						echo "<br>";
 						echo "<div id=\"Topo\" align=\"center\">";
 					  	  	echo "<div class=\"Organizador\">";
+					  	  		//PALAVRA
 					  	  		echo "<div id=\"Palavra\">";
 					  	  			echo "<p> Palavras </p>";
 					  	  		echo "</div>";
 
+					  	  		//CLASSE
+					  	  		echo "<div id=\"Classe\">";
+					  	  			echo "<p> Classe </p>";
+					  	  		echo "</div>";
+
+					  	  		//DESCRICÃO
 					  	  		echo "<div id=\"Descricao\">";
 					  	  			echo "<p> Descrições </p>";
 					  	  		echo "</div>";
 					  	  	echo "</div>";
 					    echo "</div>";
-					  while($row = $result->fetch_assoc()) {
-					  	  echo "<div align=\"center\">";
-					  	  	echo "<div class=\"Organizador\">";
-					  	  		echo "<div class=\"Palavra\">";
-					  	  			echo $row["palavra"];
-					  	  		echo "</div>";
+					    // MOSTRANDO AS PALAVRAS DO BANCO DE DADOS
+					  	while($row = $result->fetch_assoc()) {
+					  	  	echo "<div align=\"center\">";
+					  	  		echo "<div class=\"Organizador\">";
+					  	  			//PALAVRA
+					  	  			echo "<div class=\"Palavra\">";
+					  	  				echo $row["palavra"];
+					  	  			echo "</div>";
 
-					  	  		echo "<div class=\"Descricao\">";
-					  	  			echo $row["descricao"];
+					  	  			//CLASSE
+					  	  			echo "<div class=\"Classe\">";
+					  	  				echo $row["classe"];
+					  	  			echo "</div>";
+
+					  	  			//DESCRICÃO
+					  	  			echo "<div class=\"Descricao\">";
+					  	  				echo $row["descricao"];
+					  	  			echo "</div>";
 					  	  		echo "</div>";
-					  	  	echo "</div>";
-					      echo "</div>";
-					  }
+					      	echo "</div>";
+					  	}
 			} else {
 				echo "<br> <br> <br> <br>";
 					echo "<div align=\"center\">";
-					  echo "Nenhuma palavra cadastrada no banco de dados!";
+						echo "<h3>";
+					  		echo "Não há palavras cadastradas no banco de dados!";
+					  	echo "</h3>";
 					echo "</div>";
 			}
 			$conn->close();
@@ -83,9 +100,15 @@
 				text-shadow: 1px 3px 7px black;
 			}
 
+			h3{
+				color: #00ff80;
+				font-size: 30px;
+				text-shadow: 1px 2px 4px black;
+			}
+
 			.Organizador{
 				border-radius: 5px;
-				width: 90%;
+				width: 98%;
 				display: flex;
 				flex-direction: horizontal;
 			}
@@ -98,7 +121,7 @@
 				color: white;
 			}
 
-			#Palavra{
+			#Palavra, #Descricao, #Classe{
 				padding-top: 3px;
 				height: 25px;
 				border-top: 1px solid white;
@@ -111,19 +134,17 @@
 			}
 
 			#Descricao{
-				padding-top: 3px;
-				height: 25px;
-				border-top: 1px solid white;
-				border-bottom: 1px solid white;
-				font-size: 18px;
-				margin: 1px 0px;
 				width: 80%;
 				margin-left: 10px;
-				background: black;
-				font-family: arial, sans-serif;
+
 			}
 
-			.Palavra, .Descricao{
+			#Classe{
+				width: 20%;
+				margin-left: 10px;
+			}
+
+			.Palavra, .Descricao, .Classe{
 				padding-top: 3px;
 				height: 25px;
 				color: black;
@@ -132,20 +153,27 @@
 				font-size: 18px;
 				margin: 1px 0px;
 				overflow-x: hidden;
-				overflow-y: scroll;
 			}
 
 			.Palavra{
 				width: 20%;
-				background: white;
+				background: rgb(0, 255, 128);
+				font-family: arial, sans-serif;
+			}
+
+			.Classe{
+				width: 20%;
+				margin-left: 10px;
+				background: rgb(100, 255, 158);
 				font-family: arial, sans-serif;
 			}
 
 			.Descricao{
 				width: 80%;
 				margin-left: 10px;
-				background: #BDBDBD;
+				background: rgb(255, 255, 255);
 				font-family: arial, sans-serif;
+				overflow-y: scroll;
 			}
 		</style>
 	</body>

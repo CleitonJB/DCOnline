@@ -1,5 +1,4 @@
 body{
-	background: gray;
 	margin: 0em;
 }
 
@@ -9,14 +8,15 @@ h1, p{
 }
 
 h1{
-	font-size: 40px;
+	font-size: 45px;
+	color: #00ff80;
 	
 }
 
 header{ 
 	width: 100%;
 	height: 120px;
-	background: black;
+	background: rgba(0, 0, 0, 0.75);
 	border-bottom: 2px solid white; 
 	margin-bottom: 40px;
 }
@@ -29,7 +29,7 @@ header input{
 	margin: 10px;
 	border: 1px solid gray;
 	border-radius: 5px;
-	width: 100px;
+	width: 110px;
 	height: 30px;
 }
 
@@ -37,32 +37,44 @@ input{
 	padding: 2px;
 }
 
-.Bloco{
-	border-radius: 5%;
-	padding: 30px;
-	margin: auto;
-	width: 40%;
-	height: 520px;
-	background: white;
-	box-shadow: 3px 5px 10px black;
+header a input{
+	border: 1px solid #00ff80;
+	background: black;
+	color: #00ff80;
 }
 
-.Bloco input{
+.Bloco{
+	border: 2px solid white;
+	border-radius: 20px;
+	padding: 30px;
+	margin: auto;
+	width: 50%;
+	height: 520px;
+	background: rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 5px 10px #00ff80;
+	margin-bottom: 30px;
+}
+
+.Bloco input[type="text"], .Bloco input[type="password"]{
 	height: 25px;
+	margin-top: 4px;
+}
+
+.Bloco input[type="submit"]{
+	height: 30px;
+	font-size: 13px;
 }
 
 .Bloco input, .Bloco textarea{
-	border: 1px solid black;
+	border: 1.3px solid #00ff80;
 	border-radius: 5px;
 	width: 50%;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
 }
 
 .Bloco h1, .Bloco p{
-	color: black;
-}
-
-.Bloco h1{
-	text-shadow: 2px 6px 8px gray;
+	color: white;
 }
 
 .Bloco input{

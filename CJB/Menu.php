@@ -5,7 +5,7 @@
 		<title>DCOnline - Menu</title>
 		<link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
-	<body>
+	<body style="background: url('cadastro.jpg'); background-position: top center; background-size: 100%; background-repeat: no-repeat;">
 		<header>
 			<center>
 				<h1>Dicionário Online</h1>
@@ -24,14 +24,17 @@
 
 		<div class="Bloco">
 			<center>
-				<h1>Cadastre uma nova palavra!</h1>
+				<h1>Cadastro de palavra:</h1> 
 
 				<form action="cadastro.php" method="POST">
 					<p>Palavra:</p> 
-					<input type="text" name="palavra" autocomplete="off" placeholder="Palavra">
+					<input type="text" name="palavra" autocomplete="off">
+
+					<p>Classe:</p> 
+					<input type="text" name="classe" autocomplete="off">
 
 					<p>Descrição:</p> 
-					<textarea rows="5" cols="40" name="descricao" autocomplete="off" placeholder="Descrição"></textarea>
+					<textarea rows="5" cols="40" name="descricao" autocomplete="off"></textarea>
 
 					<br> <br> <br> <br>
 					<input type="submit" name="" value="Enviar">
