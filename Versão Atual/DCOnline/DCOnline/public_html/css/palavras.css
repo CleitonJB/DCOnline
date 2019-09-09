@@ -1,0 +1,73 @@
+body{
+  background-size: 100% 100%; 
+  background-repeat: no-repeat;
+}
+
+.Titulo{
+  text-align: center;
+  margin: 40px;
+}
+
+.Titulo h1{
+  color: white;
+  font-size: 2em;
+}
+
+.Tabela{
+  margin: auto;
+  text-align: center;
+  width: auto;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.Header{
+  display: flex;
+  background: black;
+  color: white;
+  padding: 2px 4px;
+}
+
+.Header h3{
+  font-size: 1em;
+  margin: auto;
+  padding: 5px 5px;
+}
+
+.Colunas{
+  position: relative;
+  display: flex;
+  flex-direction: horizontal;
+  
+}
+
+.Colunas h6{
+  font-weight: normal;
+  border-bottom: 1px ridge white;
+  color: white;
+  height: 35px;
+  margin: auto;
+  padding: 2px 5px;
+}
+
+.palavra{
+  position: relative;
+  text-align: center;
+  min-width: 24%;
+}
+
+.Colunas .palavra{
+  text-align: left;
+}
+
+.classe{
+  text-align: center;
+  min-width: 24%;
+}
+
+.descricao{
+  min-width: 52%;
+}
+
+.Colunas .descricao{
+  overflow-y: scroll;
+}
