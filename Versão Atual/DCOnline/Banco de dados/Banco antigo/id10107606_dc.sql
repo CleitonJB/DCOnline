@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 10-Abr-2020 às 22:10
+-- Generation Time: 09-Set-2019 às 18:19
 -- Versão do servidor: 10.3.16-MariaDB
--- versão do PHP: 7.3.12
+-- versão do PHP: 7.3.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `id10107606_dc`
+-- Database: `id10107606_dc`
 --
 
 -- --------------------------------------------------------
@@ -94,32 +94,7 @@ INSERT INTO `palavras` (`id`, `palavra`, `classe`, `descricao`) VALUES
 (53, 'alheamento', 'sm', 'Alienação.'),
 (54, 'assisado', 'adj', 'Que tem siso, que age com siso; judicioso, sensato, ponderado.'),
 (55, 'beneplácito', 'sm', 'Aprovação de um ato, de um pacto; concordância com eles, ou seu consentimento.\r\nAprovação de algo por autoridade ou em instância superior.'),
-(56, 'deletério', 'adj', 'Que prejudica a saúde; insalubre.\r\nQue destrói, causa dano (ação deletéria); daninho, danoso, nocivo.\r\nFig. Que corrompe (doutrinas deletérias); degradante.'),
-(57, 'cartografar', 'v', 'Fazer mapa; fazer levantamento e traçado de carta geográfica.'),
-(58, 'feniano', 'sm ou adj', 'Revolucionário irlandês contra o domínio da Inglaterra.'),
-(59, 'locaute', 'sm', 'Fechamento de uma fábrica ou estabelecimento pela direção, a fim de impedir a entrada dos funcionários e pressioná-los a aceitar certas condições.'),
-(60, 'abstratizante', 'adj', 'Que torna abstrato.'),
-(61, 'abstratizante', 'adj', 'Que torna abstrato.'),
-(62, 'abrasonar', 'v', 'Conceder brasão a.'),
-(63, 'açaimar', 'v', '1. Por açaimo ou mordaça em animal; amordaçar.\r\n2.Refrear ou fazer calar.'),
-(64, 'abjurar', 'v', 'Abdicar; renunciar.'),
-(65, 'abismal', '', ''),
-(66, '', 'adj', 'Que tem característica ou natureza de abismo; abissal.'),
-(67, 'alodial', 'adj', 'Diz-se de imóvel ou quaisquer outros bens que estão livres de foros, pensões, vínculos ou outro ônus ou encargo (bens alodiais).'),
-(68, 'ancilose', 'sf', '1. Med. Falta de movimento em uma articulação.\r\n2. Fig. Rigidez de ideias etc.'),
-(69, 'bastardia', 'sf', '1.Característica ou condição de quem é bastardo\r\n2. Descendência bastarda de uma família; os descendentes de filho ou filha ilegítimos.\r\n3. Alteração ou perda das característcas primitivas.'),
-(70, 'bastião', 'sm', 'Muro ou trincheira levantada diante do ângulo saliente de um forte ou de uma praça.'),
-(71, 'báratro', 'sm.', 'Precipício onde se jogavam os condenados em Atenas; inferno; abismo.'),
-(72, 'umbral', 'sm.', 'Local através do qual se consegue entrar; porta.\r\nRegião espiritual habitada por morto que ainda mantém relações com a vida terrena.'),
-(73, 'himeneu', 'sm', 'União matrimonial, casamento; festa em que se celebra esta união.'),
-(74, 'alígero', 'adj', 'Que tem asas; que é muito rápido e leve.'),
-(75, 'platonizar', 'verbo', 'Atribuir feições platônicas a.'),
-(76, 'trívio', 'adj.', 'Que pode se separar em três caminhos; local exato onde se encontram três ruas ou três caminhos.'),
-(77, 'lavorar', 'verbo', 'Lavrar; cultivar.'),
-(78, 'encastrar', 'verbo', 'Encaixar; engastar.'),
-(79, 'sobrestante', 'adj.', 'Que suspender, interrompe o desenvolvimento de; faz com que algo seja suspenso: sobrestou o inquérito; sobrestou ao ver o policial.\r\nQue faz parar o andamento de uma ação judicial; cessar: o juiz sobresteve a ação. Que faz com que algo seja adiado ou postergado; adiar: o presidente sobresteve a medida provisória.\r\nQue aparecer mais que os demais: a montanha sobrestava ao horizonte.'),
-(80, 'toldar', 'verbo', 'Cobrir com toldo.\r\nAnuviar, tampar, encobrir, obscurecer.\r\nEntristecer.'),
-(81, 'viração', 'sf', 'Vento suave e fresco que sopra do mar para a terra.');
+(56, 'deletério', 'adj', 'Que prejudica a saúde; insalubre.\r\nQue destrói, causa dano (ação deletéria); daninho, danoso, nocivo.\r\nFig. Que corrompe (doutrinas deletérias); degradante.');
 
 -- --------------------------------------------------------
 
@@ -141,33 +116,33 @@ INSERT INTO `users` (`id`, `username`, `password`) VALUES
 (2, 'admin', 'admin');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `palavras`
+-- Indexes for table `palavras`
 --
 ALTER TABLE `palavras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `users`
+-- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `palavras`
+-- AUTO_INCREMENT for table `palavras`
 --
 ALTER TABLE `palavras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT de tabela `users`
+-- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
